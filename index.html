@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>King's Lynn Badminton Club</title>
+    <script src="./assets/js/color-modes.js"></script>
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="klbc.css" rel="stylesheet">
+</head>
+    <script>
+  fetch('partials/header.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+  fetch('partials/footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+<body class="d-flex h-100 text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <div id="header-placeholder" class="mb-auto"></div>
+
+        <main class="px-3">
+            <h1><img src="KLBCText.svg" style="width: 100%;" alt="King's Lynn Badminton Club" /></h1>
+            <p class="lead">Serve, Smash, Socialise</p>
+            <p class="lead"> <a href="#" class="btn btn-lg btn-primary fw-bold">Learn more</a> </p>
+        </main>
+        <div id="footer-placeholder" class="mt-auto"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
