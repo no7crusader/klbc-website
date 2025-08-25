@@ -8,30 +8,32 @@
     <title>King's Lynn Badminton Club</title>
     <script src="./assets/js/color-modes.js"></script>
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="klbc.css" rel="stylesheet">
+    <link href="/assets/css/klbc.css" rel="stylesheet">
 </head>
+<script>
+    fetch('partials/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
 
-<body class="d-flex h-100 text-center text-bg-dark"> 
+    fetch('partials/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+
+<body class="d-flex h-100 text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="mb-auto">
-            <div>
-                <h3 class="float-md-start mb-0">KLBC</h3>
-                <nav class="nav nav-masthead justify-content-center float-md-end">
-                    <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">About</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Sessions</a>
-                    <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-                </nav>
-            </div>
-        </header>
+        <div id="header-placeholder" class="mb-auto"></div>
+
         <main class="px-3">
-            <h1><img src="KLBCLogo.png" style="width: 60%; border-radius: 100%;" alt="King's Lynn Badminton Club"/></h1>
-            <p class="lead">Serve, Smash, Socialise</p>
-            <p class="lead"> <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Learn more</a> </p>
+            <h1><img src="/assets/images/PegBoardArty.jpg" class="responsive" alt="Club peg board"></h1>
+            <h2>Club nights</h2>
+            <h3>Thursdays 8pm-10pm @ Lynnsport</h3>
+            <h4>Improve your play through friendly, competitive games</h4>
+            <h3>New members always welcome</h3>
+            <h4>Playing experience is preferred</h4>
+            <h3>First session <b>FREE!</b></h3>
         </main>
-        <footer class="mt-auto text-white-50">
-            <p>Copyright King's Lynn Badminton Club 2025.</p>
-        </footer>
+        <div id="footer-placeholder" class="mt-auto"></div>
     </div>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
