@@ -10,28 +10,24 @@
     <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./assets/css/klbc.css" rel="stylesheet">
 </head>
-<script>
-    fetch('partials/header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+    <script>
+  fetch('partials/header.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('header-placeholder').innerHTML = data);
 
-    fetch('partials/footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  fetch('partials/footer.html')
+    .then(response => response.text())
+    .then(data => document.getElementById('footer-placeholder').innerHTML = data);
 </script>
-
 <body class="d-flex h-100 text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         <div id="header-placeholder" class="mb-auto"></div>
 
         <main class="px-3">
-            <h1><img src="./assets/images/PegBoardArty.jpg" class="responsive" alt="Club peg board"></h1>
-            <h2>Club Nights</h2>
-            <h3>Thursdays 8pm-10pm @ Lynnsport</h3>
-            <h4>Improve your play through friendly, competitive games</h4>
-            <h3>New members always welcome</h3>
-            <h4>Playing experience is preferred</h4>
-            <h3>First session <b>FREE!</b></h3>
+            <h1><img src="./assets/images/KLBC-Logo.svg" alt="King's Lynn Badminton Club" height="200"></h1>
+            <h1><img src="./assets/images/KLBCText.svg" style="width: 100%;" alt="King's Lynn Badminton Club" /></h1>
+            <p class="lead">Serve, Smash, Socialise</p>
+            <p class="lead"> <a href="./sessions.html" class="btn btn-lg btn-primary fw-bold">Learn more</a> </p>
         </main>
         <div id="footer-placeholder" class="mt-auto"></div>
     </div>
